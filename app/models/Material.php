@@ -18,6 +18,6 @@ class Material extends Model
 
     public function categories()
     {
-        return $this->hasMany('App/models\Category');
+        return $this->hasMany('App\models\Category');
     }
 }

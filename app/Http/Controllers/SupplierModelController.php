@@ -71,7 +71,7 @@ class SupplierModelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $material = SupplierModel::find($id)->update($request->all());
+        SupplierModel::find($id)->update($request->all());
         \Session::flash('message', 'تم الحفظ بنجاح !');
         \Session::flash('alert-class', 'alert-success');
         return redirect()->route("supplier.index");

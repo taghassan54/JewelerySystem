@@ -1,11 +1,11 @@
 <?php
 
-namespace App/models;
+namespace App\models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Invoices extends Model 
+class Invoices extends Model
 {
 
     protected $table = 'invoices';

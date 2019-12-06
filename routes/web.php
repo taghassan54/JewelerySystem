@@ -23,11 +23,11 @@ Route::get('/', function () {
 
 Route::resource('category', 'CategoryController');
 Route::resource('material', 'MaterialController');
-Route::resource('productmodel', 'ProductModelController');
+Route::resource('jewelry', 'ProductModelController');
 Route::resource('caliber', 'GoldCaliberController');
 Route::resource('invoices', 'InvoicesController');
 Route::resource('invoiceprodects', 'InvoiceProdectsController');
-Route::resource('clientmodel', 'ClientModelController');
+Route::resource('clients', 'ClientModelController');
 Route::resource('supplier', 'SupplierModelController');
 
 Auth::routes();

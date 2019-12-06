@@ -14,5 +14,14 @@ class ProductModel extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $fillable = array('name', 'img', 'description', 'price', 'categories_id', 'matrial_weight', 'caliber_id');
+    protected $fillable = array('name', 'img', 'description', 'price', 'category_id', 'matrial_weight', 'caliber_id');
+
+    public function Caliber()
+    {
+        return $this->belongsTo(GoldCaliber::class);
+    }
+    public function Category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

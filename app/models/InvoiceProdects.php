@@ -1,11 +1,11 @@
 <?php
 
-namespace App/models;
+namespace App\models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class InvoiceProdects extends Model 
+class InvoiceProdects extends Model
 {
 
     protected $table = 'invoice_prodects';
@@ -20,5 +20,4 @@ class InvoiceProdects extends Model
     {
         return $this->belongsTo('App/models\ProductModel');
     }
-
 }
