@@ -16,9 +16,21 @@ class Invoices extends Model
     protected $dates = ['deleted_at'];
     protected $fillable = array('user_id', 'type', 'clients_id', 'supplier_id');
 
-    public function invoices_prodects()
+    public function prodects()
     {
-        return $this->hasMany('App/models\InvoiceProdects');
+        return $this->hasMany('App\models\InvoiceProdects','invoices_id');
     }
+  public function Client()
+  {
+      return $this->belongsTo(ClientModel::class,'clients_id');
+  }
+  public function Supplier()
+  {
+      return $this->belongsTo(SupplierModel::class,'supplier_id');
+  }
+  public function User()
+  {
+      return $this->belongsTo('App\User','user_id');
+  }
 
 }

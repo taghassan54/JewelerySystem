@@ -18,6 +18,6 @@ class InvoiceProdects extends Model
 
     public function prodects()
     {
-        return $this->belongsTo('App/models\ProductModel');
+        return $this->belongsTo('App\models\ProductModel');
     }
 }

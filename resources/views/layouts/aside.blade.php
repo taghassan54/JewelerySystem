@@ -55,7 +55,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="/jewelry" class="nav-link">
             <i class="nav-icon fas fa-gem "></i>
             <p>
               المجوهرات
@@ -71,7 +71,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="/invoices?type=selling" class="nav-link">
             <i class="nav-icon fas fa-hand-holding-usd"></i>
             <p>
             فواتير البيع
@@ -79,7 +79,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="/invoices?type=purchase" class="nav-link">
             <i class="nav-icon fas fa-hand-holding-usd"></i>
             <p>
               فواتير الشراء
@@ -93,6 +93,22 @@
                 التقارير
             </p>
           </a>
+        </li>
+        <li class="nav-item">
+
+            <a class="nav-link" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+                          <i class="nav-icon fas fa-sign-out-alt"></i>
+                          <p>
+                              تسجيل خروج
+                          </p>
+         </a>
+
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+             @csrf
+         </form>
+
         </li>
 
       </ul>
