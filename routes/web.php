@@ -29,6 +29,10 @@ Route::resource('invoices', 'InvoicesController');
 Route::resource('invoiceprodects', 'InvoiceProdectsController');
 Route::resource('clients', 'ClientModelController');
 Route::resource('supplier', 'SupplierModelController');
+Route::resource('reports', 'reportsController');
+Route::get('reports', function(){
+    return view('reports.index');
+});
 
 Auth::routes();
 
